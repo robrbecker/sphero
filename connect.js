@@ -1,10 +1,12 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection: { name: 'looped', adaptor: 'loopback'},
+  name: 'jerky',
+  connection: { name: 'sphero', adaptor: 'sphero', port: '/dev/cu.Sphero-RGY-RN-SPP' },
+  device: { name: 'sphero', driver: 'sphero' },
 
   work: function() {
-    every((1).second(), function() { console.log("Hello, human!"); });
+    every((30).second(), function() { console.log("I'm not dead"); });
   }
 });
 

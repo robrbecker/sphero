@@ -5,8 +5,8 @@ Cylon.robot({
   device: { name: 'sphero', driver: 'sphero' },
 
   work: function(me) {
-    every((1).second(), function() {
-      me.sphero.roll(60, Math.floor(Math.random() * 360));
-    });
+    //every((1).second(), function() {
+      me.sphero.roll(90, 320);
+    //});
   }
 }).start();
